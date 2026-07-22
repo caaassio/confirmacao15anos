@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1E2444;
+    color: #E7E3DC;
+    font-family: Montserrat, sans-serif;
+}
+
+.container {
+    width: min(90%, 520px);
+    margin: 70px auto;
+    text-align: center;
+}
+
+.nome {
+    background-image: url(./header.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    height: 230px;
+}
+
+span {
+    display: block;
+    font-family: "Bodoni Moda", serif;
+    margin-top: 10px;
+    letter-spacing: 4px;
+    color: #F2C57C;
+    text-transform: uppercase;
+    font-size: 1.6em;
+    padding: 20px;
+}
+
+p {
+    margin: 20px 0 30px 0;
+    line-height: 1.5;
+    color: #cfcfcf;
+    font-family: "Montserrat", sans-serif;
+}
+
+.arabesco{
+    width: 250px;
+    margin: 0 auto;
+    background-image: url(./arabesco.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+label {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.name-label {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.question-label {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+input[type="text"] {
+    background: transparent;
+    border: 1px solid #F2C57C;
+    padding: 16px;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: white;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 18px;
+    border: none;
+    cursor: pointer;
+    background: #F2C57C;
+    color: #1E2444;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    background: #ffd28d;
+}
+
+.success {
+    display: none;
+    text-align: center;
+    margin-top: 40px;
+    animation: fade .6s ease;
+}
+
+.success h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 46px;
+    color: #F2C57C;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.success p {
+    margin: 0;
+    color: #E7E3DC;
+    line-height: 1.8;
+}
+
+.divider {
+    width: 120px;
+    height: 1px;
+    background: #F2C57C;
+    margin: 25px auto;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 60px 20px;
+    color: #bdbdbd;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+    .nome{
+        height: 160px;
+    }
+
+    span{
+        font-size: 1.4em;
+    }
+
+    .arabesco{
+        width: 180px;
+    }
+
+    .name-label {
+        font-size: 1rem;
+    }
+
+    .question-label {
+        padding-top: 20px;
+        font-size: 1rem;
+    }
+
+    input[type="text"] {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
