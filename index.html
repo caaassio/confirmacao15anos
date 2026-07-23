@@ -19,90 +19,91 @@
 
 <body>
 
-<section class="container">
+    <div class="l-r-wrapper">
+        <img src="left.png" class="left" alt="">
+        <img src="right.png" class="right" alt="">
+    </div>
+    
+    <section class="container">
 
-    <div class="nome"></div>
+        <div class="nome"></div>
 
-    <span>Confirmação de Presença</span>
+        <span>Confirmação de Presença</span>
 
-    <p>
-        Sua presença tornará essa noite ainda mais especial.
-        <br>
-        Confirme até 15/02/2027.
-    </p>
+        <p>
+            Sua presença tornará essa noite ainda mais especial
+        </p>
 
-    <span class="arabesco"></span>
+        <!-- <p>
+            Confirme até 15/02/2027.
+        </p> -->
 
-    <form id="rsvp">
+        <span class="arabesco"></span>
 
-        <label class="name-label">Nome completo</label>
+        <form id="rsvp">
 
-        <input
-            type="text"
-            id="nome"
-            required
-        >
+            <label class="name-label">Nome completo</label>
 
-        <label class="question-label">Você irá comparecer?</label>
+            <input
+                type="text"
+                id="nome"
+                required
+            >
 
-        <div class="radio-group">
+            <label class="question-label">Você irá comparecer?</label>
 
-            <label>
-                <input
-                    type="radio"
-                    name="presenca"
-                    value="Sim"
-                    required
-                >
+            <div class="radio-group">
 
-                Sim, estarei presente
-            </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="presenca"
+                        value="Sim"
+                        required
+                    >
 
-            <label>
-                <input
-                    type="radio"
-                    name="presenca"
-                    value="Não"
-                >
+                    Sim, estarei presente
+                </label>
 
-                Infelizmente não poderei comparecer
-            </label>
+                <label>
+                    <input
+                        type="radio"
+                        name="presenca"
+                        value="Não"
+                    >
+
+                    Infelizmente não poderei comparecer
+                </label>
+
+            </div>
+
+            <button type="submit">
+
+                Confirmar Presença
+
+            </button>
+
+        </form>
+
+        <div class="success" id="success">
+
+            <h2>Obrigado!</h2>
+
+            <p class="success-message">
+                Sua confirmação foi recebida com sucesso!
+            </p>
 
         </div>
 
-        <button type="submit">
+    </section>
 
-            Confirmar Presença
+    <footer>
 
-        </button>
+    23 de Fevereiro de 2027 • Aniversário de 15 anos da Sofia Russo
 
-    </form>
+    </footer>
 
-    <div class="success" id="success">
-
-    <div class="divider"></div>
-
-        <h2>Obrigado!</h2>
-
-        <p>
-            Sua confirmação foi recebida com sucesso.
-            <br>
-            Esperamos você para uma noite inesquecível.
-        </p>
-
-    <div class="divider"></div>
-
-</div>
-
-</section>
-
-<footer>
-
-23 de Fevereiro de 2027 • Buffet Castelo
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>

@@ -8,12 +8,50 @@ body {
     background: #1E2444;
     color: #E7E3DC;
     font-family: Montserrat, sans-serif;
+    position: relative;
+    padding-top: 40px;
+    z-index: 0;
+}
+
+@font-face {
+    font-family: "Flatlion";
+    src: url("./flatlion.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
 }
 
 .container {
     width: min(90%, 520px);
-    margin: 70px auto;
+    margin: 0 auto;
     text-align: center;
+    z-index: 1;
+    position: relative;
+}
+
+.l-r-wrapper{
+    position: absolute;
+    inset: 0;      
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.left{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    pointer-events: none;
+}
+
+.right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: auto;
+    pointer-events: none;
 }
 
 .nome {
@@ -36,11 +74,19 @@ span {
     padding: 20px;
 }
 
+p:first-of-type {
+    line-height: 0.6;
+    color: #cfcfcf;
+    /* font-family: "Montserrat", sans-serif; */
+    font-family: "Flatlion", sans-serif;
+    font-size: 6rem;
+}
+
 p {
     margin: 20px 0 30px 0;
-    line-height: 1.5;
-    color: #cfcfcf;
     font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+    line-height: 1.8;
 }
 
 .arabesco{
@@ -121,6 +167,11 @@ button:hover {
     background: #ffd28d;
 }
 
+.success-message{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 1.4rem !important;
+}
+
 .success {
     display: none;
     text-align: center;
@@ -167,6 +218,8 @@ footer {
     color: #bdbdbd;
     font-size: 13px;
     letter-spacing: 2px;
+    z-index: 1;
+
 }
 
 @media (max-width: 600px) {
@@ -194,5 +247,9 @@ footer {
     input[type="text"] {
         padding: 14px;
         font-size: 14px;
+    }
+
+    .l-r-wrapper{
+        opacity: 0.2;
     }
 }
