@@ -2,22 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    min-height: 100%;
 }
 
 body {
-    background: #1E2444;
-    color: #E7E3DC;
-    font-family: Montserrat, sans-serif;
+    background-image: url(./bg.jpg);
+    color: #162775;
+    font-family: Times New Roman, serif;
     position: relative;
-    padding-top: 40px;
     z-index: 0;
-}
-
-@font-face {
-    font-family: "Flatlion";
-    src: url("./flatlion.ttf") format("truetype");
-    font-weight: 500;
-    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .container {
@@ -33,7 +29,6 @@ body {
     inset: 0;      
     z-index: 0;
     pointer-events: none;
-    opacity: 0.5;
 }
 
 .left{
@@ -60,42 +55,27 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
-    height: 230px;
+    height: 450px;
 }
 
 span {
     display: block;
-    font-family: "Bodoni Moda", serif;
-    margin-top: 10px;
     letter-spacing: 4px;
-    color: #F2C57C;
     text-transform: uppercase;
     font-size: 1.6em;
-    padding: 20px;
+    padding: 0 0 30px 0;
 }
 
 p:first-of-type {
     line-height: 0.6;
     color: #cfcfcf;
-    /* font-family: "Montserrat", sans-serif; */
-    font-family: "Flatlion", sans-serif;
     font-size: 6rem;
 }
 
 p {
     margin: 20px 0 30px 0;
-    font-family: "Montserrat", sans-serif;
     font-size: 1.4rem;
     line-height: 1.8;
-}
-
-.arabesco{
-    width: 250px;
-    margin: 0 auto;
-    background-image: url(./arabesco.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding-bottom: 50px;
 }
 
 form {
@@ -121,18 +101,21 @@ label {
     text-transform: uppercase;
 }
 
+input#nome{
+    border: 1px solid #162775;
+}
+
 input[type="text"] {
     background: transparent;
-    border: 1px solid #F2C57C;
     padding: 16px;
-    color: white;
+    color: #162775;
     font-size: 16px;
     border-radius: 8px;
 }
 
 input[type="text"]:focus {
     outline: none;
-    border-color: white;
+    border-color: #162775;
 }
 
 .radio-group {
@@ -146,29 +129,47 @@ input[type="text"]:focus {
     gap: 10px;
     align-items: center;
 }
-
 button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     margin-top: 20px;
-    padding: 18px;
-    border: none;
+    padding: 15px;
+    border: 1px solid #162775;
     cursor: pointer;
-    background: #F2C57C;
-    color: #1E2444;
+    background-color: transparent;
+    color: #162775;
     font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
     letter-spacing: 2px;
     text-transform: uppercase;
     border-radius: 8px;
-    transition: .3s;
+    transition: all .3s ease;
+}
+
+button img {
+    position: absolute;
+    left: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
 }
 
 button:hover {
-    transform: translateY(-2px);
-    background: #ffd28d;
+    transform: scale(1.05);
+    background: #162775;
+    color: rgb(255, 255, 255);
+    transition: all .3s ease;
+}
+
+button:hover img {
+    filter: invert(1) grayscale(1);
 }
 
 .success-message{
-    font-family: "Montserrat", sans-serif !important;
     font-size: 1.4rem !important;
 }
 
@@ -180,7 +181,6 @@ button:hover {
 }
 
 .success h2 {
-    font-family: "Cormorant Garamond", serif;
     font-size: 46px;
     color: #F2C57C;
     font-weight: 500;
@@ -189,15 +189,8 @@ button:hover {
 
 .success p {
     margin: 0;
-    color: #E7E3DC;
+    color: #162775;
     line-height: 1.8;
-}
-
-.divider {
-    width: 120px;
-    height: 1px;
-    background: #F2C57C;
-    margin: 25px auto;
 }
 
 @keyframes fade {
@@ -214,25 +207,30 @@ button:hover {
 
 footer {
     text-align: center;
-    padding: 60px 20px;
-    color: #bdbdbd;
+    padding: 40px 20px;
+    color: #162775;
     font-size: 13px;
     letter-spacing: 2px;
     z-index: 1;
+    margin-top: auto;
+}
 
+@media (max-width: 850px) {
+
+    .l-r-wrapper{
+        opacity: 0.1;
+    }
 }
 
 @media (max-width: 600px) {
+
     .nome{
         height: 160px;
+        margin: 20px;
     }
 
     span{
         font-size: 1.4em;
-    }
-
-    .arabesco{
-        width: 180px;
     }
 
     .name-label {
@@ -251,5 +249,13 @@ footer {
 
     .l-r-wrapper{
         opacity: 0.1;
+    }
+
+    button img {
+        left: 20px;
+    }
+
+    footer{
+        padding: 20px;
     }
 }
